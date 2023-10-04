@@ -9,6 +9,9 @@ thread](https://github.com/arendst/Tasmota/discussions/19624 ).
 
 ## Usage
 
+Upload millershuffle.be into the Tasmota file system under Consoles ->
+Manage File Systems, then the import in the code sample below will work.
+
     import millershuffle
     var ms = millershuffle.create(123,100)  # shuffleID 123, listSize 100
     print(ms.random())                      # next random number in shuffle sequence
@@ -18,6 +21,4 @@ Doing a speed comparison with math.rand(), a simple loop summing 2000
 numbers took 160 ms vs 46 ms on an ESP32-C3. The speed of this should
 be fine for most purposes.
 
-This code can be stored in the Tasmota file system as
-millershuffle.be.
 
